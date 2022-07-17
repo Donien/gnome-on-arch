@@ -16,8 +16,7 @@ apply_all_dconf () {
         # Catch empty / non existing dconf directory
         [ -e "$conf_file" ] || continue
 
-        #dconf load / < "$conf_file"
-        echo "$conf_file"
+        dconf load / < "$conf_file"
     done
 }
 
